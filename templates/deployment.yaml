@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.service_name }}
-        image: {{ .Values.image_name }}:{{ .Values.image_tag }}
+        image: '{{ .Values.image_name }}:{{ .Values.image_tag }}'
         imagePullPolicy: Always
         # livenessProbe:
         #   tcpSocket:
