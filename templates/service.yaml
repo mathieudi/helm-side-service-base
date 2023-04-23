@@ -1,13 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ .Values.service_name }}-service
-  namespace: {{ .Values.namespace_name }}
+  name: {{ .Values.global.service_name }}-service
+  namespace: {{ .Values.global.namespace_name }}
   labels:
-    app: {{ .Values.service_name }}
+    app: {{ .Values.global.service_name }}
 spec:
   selector:
-    app: {{ .Values.service_name }}
+    app: {{ .Values.global.service_name }}
   ports:
     - port: 80
       name: http
