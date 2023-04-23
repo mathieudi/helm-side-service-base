@@ -1,0 +1,35 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Values.service_name }}-deployment
+  namespace: {{ .Values.namespace_name }}
+  labels:
+      app: {{ .Values.service_name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.service_name }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.service_name }}
+        version: v1
+    spec:
+      containers:
+      - name: {{ .Values.service_name }}
+        image: {{ .Values.image_name }}:{{ .Values.image_tag }}
+        imagePullPolicy: Always
+        livenessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        ports:
+        - containerPort: 80
+      restartPolicy: Always

@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Values.service_name }}
+  namespace: {{ .Values.namespace_name }}
+  labels:
+    app: {{ .Values.service_name }}
+spec:
+  selector:
+    app: {{ .Values.service_name }}
+  ports:
+    - port: 80
+      name: http
+  type: NodePort
