@@ -3,12 +3,12 @@ entries:
   side-service-base:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-23T15:10:44.011439+02:00"
+    created: "2023-04-23T15:17:07.332266+02:00"
     description: A Helm chart for Kubernetes to install a basic service
-    digest: 408a6df6f1ef82e252b314c484de3d34a9535589bc390ba53bc5ca5ceca72702
+    digest: d879fdb047f9438e22771300f809c561f1cb7ad4ff2223bd6f1402acbe548682
     name: side-service-base
     type: application
     urls:
     - https://mathieudi.github.io/helm-side-service-base/side-service-base-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-23T15:10:44.010803+02:00"
+generated: "2023-04-23T15:17:07.331606+02:00"
