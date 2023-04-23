@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ .Values.service_name }}
+  name: {{ .Values.service_name }}-service
   namespace: {{ .Values.namespace_name }}
   labels:
     app: {{ .Values.service_name }}
